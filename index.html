@@ -2,26 +2,30 @@
 <html>
   <head>
     <title>Simple Metronome</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <h1>The Simple Metronome</h1>
-    <input id="bpmView" type="number" value=120 onchange="valueChanged()"></input>
-    <br/>
-    <input id="bpmSlider" min=50 max=250 value=120 type="range" onchange="sliderChanged()"/>
-    <br/>
-    <button id="metronomeButton" onclick=metronomeToggle()>Start metronome</button>
-    <br/>
-    <p>Time signature</p>
-    <select id="timeSignatureUpper" onchange=updateTimeSignature()>
-      <option value=4>4</option>
-      <option value=2>2</option>
-    </select>
+    <main>
+      <h1 class="text">The Simple Metronome</h1>
+      <input id="bpmView" class="text" type="number" value=120 onchange="valueChanged()"></input>
+      <br/>
+      <input id="bpmSlider" min=50 max=250 value=120 type="range" onchange="sliderChanged()"/>
+      <br/>
+      <button id="metronomeButton" onclick=metronomeToggle()>Start metronome</button>
+      <br/>
+      <p>Time signature</p>
+      <select id="timeSignatureUpper" onchange=updateTimeSignature()>
+        <option value=4>4</option>
+        <option value=2>2</option>
+      </select>
 
-    <select id="timeSignatureLower" onchange=updateTimeSignature()>
-      <option value=4>4</option>
+      <select id="timeSignatureLower" onchange=updateTimeSignature()>
+        <option value=4>4</option>
       <option value=2>2</option>
-    </select>
+      </select>
 
+    </main>
   </body>
   <script type="text/javascript" src=scripts/metronome.js></script>
 </html>
